@@ -21,6 +21,10 @@ const styles = theme => ({
   card: {
     maxWidth: 400,
   },
+  ingredientFlex: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
@@ -58,7 +62,7 @@ class RecipeReviewCard extends React.Component {
   };
 
   render() {
-    const { classes, key, title, category, description, img, date, ingredients, measure} = this.props;
+    const { classes, key, title, category, description, img, date, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, ingredient11, ingredient12, ingredient13, ingredient14, ingredient15, measurement1, measurement2, measurement3, measurement4, measurement5, measurement6, measurement7, measurement8, measurement9, measurement10, measurement11, measurement12, measurement13, measurement14, measurement15} = this.props;
 
     return (
       <Card className={classes.card}>
@@ -106,10 +110,21 @@ class RecipeReviewCard extends React.Component {
               {description}
             </Typography>
             <Typography paragraph>Ingredients:</Typography>
-              {ingredients + measure}
-            <Typography paragraph>
-              
-            </Typography>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient1 ? ingredient1 : ''}</Typography> <Typography> {measurement1 ? measurement1 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient2 ? ingredient2 : ''}</Typography> <Typography>{measurement2 ? measurement2 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient3 ? ingredient3 : ''}</Typography> <Typography> {measurement3 ? measurement3 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient4 ? ingredient4 : ''}</Typography> <Typography> {measurement4 ? measurement4 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient5 ? ingredient5 : ''}</Typography> <Typography> {measurement5 ? measurement5 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient6 ? ingredient6 : ''}</Typography> <Typography> {measurement6 ? measurement6 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient7 ? ingredient7 : ''}</Typography> <Typography> {measurement7 ? measurement7 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient8 ? ingredient8 : ''}</Typography> <Typography> {measurement8 ? measurement8 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient9 ? ingredient9 : ''}</Typography> <Typography> {measurement9 ? measurement9 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient10 ? ingredient10 : ''}</Typography> <Typography> {measurement10 ? measurement10 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient11 ? ingredient11 : ''}</Typography> <Typography> {measurement11 ? measurement11 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient12 ? ingredient12 : ''}</Typography> <Typography> {measurement12 ? measurement12 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient13 ? ingredient13 : ''}</Typography> <Typography> {measurement13 ? measurement13 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient14 ? ingredient14 : ''}</Typography> <Typography> {measurement14 ? measurement14 : ''}</Typography></div>
+            <div className={classes.ingredientFlex}><Typography paragraph>{ingredient15 ? ingredient15 : ''}</Typography> <Typography> {measurement15 ? measurement15 : ''}</Typography></div>
           </CardContent>
         </Collapse>
       </Card>
