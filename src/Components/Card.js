@@ -162,11 +162,11 @@ class RecipeReviewCard extends React.Component {
               {title[0].toUpperCase()}
             </Avatar>
           }
-          action={
-            <IconButton>
-              <MoreVertIcon />
-            </IconButton>
-          }
+          // action={
+          //   <IconButton>
+          //     <MoreVertIcon />
+          //   </IconButton>
+          // }
           title={title}
           subheader={date}
         />
