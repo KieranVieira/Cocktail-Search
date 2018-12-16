@@ -21,6 +21,9 @@ const styles = theme => ({
   card: {
     maxWidth: 400,
   },
+  headerStyle: {
+    fontWeight: 'bold',
+  },
   ingredientFlex: {
     display: 'flex',
     justifyContent: 'space-between'
@@ -105,11 +108,11 @@ class RecipeReviewCard extends React.Component {
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Description:</Typography>
+            <Typography paragraph className={headerStyle}>Description:</Typography>
             <Typography paragraph>
               {description}
             </Typography>
-            <Typography paragraph>Ingredients:</Typography>
+            <Typography paragraph className={headerStyle}>Ingredients:</Typography>
             <div className={classes.ingredientFlex}><Typography paragraph>{ingredient1 ? ingredient1 : ''}</Typography> <Typography> {measurement1 ? measurement1 : ''}</Typography></div>
             <div className={classes.ingredientFlex}><Typography paragraph>{ingredient2 ? ingredient2 : ''}</Typography> <Typography>{measurement2 ? measurement2 : ''}</Typography></div>
             <div className={classes.ingredientFlex}><Typography paragraph>{ingredient3 ? ingredient3 : ''}</Typography> <Typography> {measurement3 ? measurement3 : ''}</Typography></div>
