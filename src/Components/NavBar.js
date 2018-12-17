@@ -120,7 +120,7 @@ class NavBar extends Component {
   };
   getCats = e => {
     fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${
         e.target.value
       }`
     )
